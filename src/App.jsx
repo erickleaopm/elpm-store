@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Layout from './components/containers/Layout/Layout.component';
-import ItemListContainer from './components/molecules/ItemListContainer/ItemListContainer.component';
+import ItemListContainer from './components/containers/ItemListContainer/ItemListContainer.component';
 import Navbar from './components/molecules/Navbar/Navbar.component';
 
 function App() {
