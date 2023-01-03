@@ -1,13 +1,11 @@
-import styled from 'styled-components';
+import { ItemListContainerStyled } from './ItemListContainer.styled';
 
-const ItemListContainerStyled = styled.div``;
-
-function ItemListContainer({ greeting }) {
+const ItemListContainer = ({ greeting }) => {
   return (
     <ItemListContainerStyled>
       <h2>{greeting}</h2>
     </ItemListContainerStyled>
   );
-}
+};
 
 export default ItemListContainer;
