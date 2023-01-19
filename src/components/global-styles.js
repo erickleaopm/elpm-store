@@ -6,6 +6,7 @@ const GlobalStylesStyled = createGlobalStyle`
     --greytext: #151875;
     --primary: #fb2e86;
     --white: #ffffff;
+    --linear: linear-gradient(135deg, #FA3BE5 0%, #FF289F 100%);
     --linerbg: linear-gradient(32deg, #f3f9ff 0%, #f1f0ff 100%);
     --mintgreengradiant: linear-gradient(42deg, #36e6d5 0%, #29e871 100%);
     --text: #151875;
@@ -27,6 +28,14 @@ const GlobalStylesStyled = createGlobalStyle`
     background: var(--bg);
     color: var(--greytext);
     font: var(--body-16regular);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-inline-size: 1366px;
   }
 `;
 
