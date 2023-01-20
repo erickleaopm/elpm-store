@@ -11,7 +11,6 @@ const GlobalStylesStyled = createGlobalStyle`
     --mintgreengradiant: linear-gradient(42deg, #36e6d5 0%, #29e871 100%);
     --text: #151875;
     --red: #fb2448;
-    --subtextcolor: linear-gradient(32deg, #f3f9ff 0%, #f1f0ff 100%);
     --subtextcolor: #8a8fb9;
     --bg: #ebebeb;
     --black: #111111;

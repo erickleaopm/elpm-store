@@ -8,6 +8,13 @@ export const NavbarStyled = styled.header`
   background: var(--white);
   h1 {
     margin: 0;
+    & > a {
+      font: var(--subtitles-22bold);
+      &:hover {
+        text-decoration: none;
+        color: var(--primary);
+      }
+    }
   }
   ul {
     display: none;
@@ -37,6 +44,9 @@ export const NavbarStyled = styled.header`
     color: var(--greytext);
     font: var(--body-18regular);
     text-decoration: none;
+    &.active {
+      color: var(--primary);
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -44,6 +54,11 @@ export const NavbarStyled = styled.header`
   .navigation {
     display: flex;
     gap: 1rem;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    inline-size: 100%;
   }
   @media screen and (min-width: 768px) {
     .btn-menu {

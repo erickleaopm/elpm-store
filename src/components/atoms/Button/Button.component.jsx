@@ -9,6 +9,7 @@ const Button = ({
   onClick,
   ariaExpanded,
   ariaControls,
+  width,
 }) => {
   const component = link ? 'a' : 'button';
   let IconComponent = null;
@@ -26,6 +27,7 @@ const Button = ({
       onClick={onClick}
       aria-expanded={ariaExpanded}
       aria-controls={ariaControls}
+      width={width}
     >
       {IconComponent}
       {text}

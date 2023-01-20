@@ -1,36 +1,33 @@
+import { Link } from 'react-router-dom';
+import { capitalizeSentence } from '../../../utils/capitalizeSentence';
+
+import { formatPrice } from '../../../utils/formatPrice';
 import Button from '../../atoms/Button/Button.component';
 import { CardProductStyled } from './CardProduct.styled';
 
-const CardProduct = ({
-  name,
-  description,
-  image,
-  alternative_text,
-  price,
-  discount_price,
-}) => {
-  const formatPrice = (amount) => {
-    return amount.toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-  };
-
+const CardProduct = ({ id, title, description, image, price, category }) => {
   return (
     <CardProductStyled>
       <figure className="productImageContainer">
         <img
           className="productImage"
           src={image}
-          alt={alternative_text}
+          alt={title}
           height={217}
           width={313}
+          loading="lazy"
         />
       </figure>
       <div className="productDetails">
-        <h3 className="productName">{name}</h3>
+        <h3 className="productName">
+          <Link to={`/item/${id}`}>{title}</Link>
+        </h3>
+        {category && (
+          <Link to={`/category/${category}`} className="productCategory">
+            {capitalizeSentence(category)}
+          </Link>
+        )}
         <div className="productPrice">
-          {discount_price ? <span>{formatPrice(discount_price)}</span> : null}
           <span>{formatPrice(price)}</span>
         </div>
         <p className="productDescription">{description}</p>

@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 
 export const ItemListContainerStyled = styled.div`
+  h2 {
+    font: var(--subtitles-22bold);
+    color: var(--subtextcolor);
+    margin: 2.5rem 0 1rem;
+    & > span {
+      color: var(--primary);
+    }
+  }
+
   & .productList {
     display: flex;
     flex-direction: column;

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const CardProductStyled = styled.div`
+export const ItemDetailContainerStyled = styled.div`
   background: var(--white);
-  max-inline-size: 20.5rem;
   padding: 1rem;
+  margin-block-start: 2.5rem;
 
   .productImageContainer {
-    margin: 0 0 1rem;
+    margin: 0 auto 2rem;
     inline-size: 313px;
     block-size: 217px;
     overflow: hidden;
@@ -18,6 +18,7 @@ export const CardProductStyled = styled.div`
       object-position: center;
     }
   }
+
   .productName,
   .productDescription {
     margin: 0 0 0.75rem;
@@ -38,19 +39,8 @@ export const CardProductStyled = styled.div`
   .productDescription {
     font: var(--body-18regular);
     line-height: 1.5rem;
-    color: var(--subtextcolor);
+    color: var(--black);
     margin-block-end: 1.5rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .productActions {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    flex: 1 0 212px;
-    justify-content: center;
   }
   .productCategory {
     display: inline-block;
@@ -61,6 +51,10 @@ export const CardProductStyled = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+  .productActions {
+    display: flex;
+    gap: 1rem;
   }
   .productPrice {
     display: flex;
@@ -81,6 +75,9 @@ export const CardProductStyled = styled.div`
 
     .productImageContainer {
       margin: 0;
+      inline-size: 538px;
+      block-size: 489px;
+      flex: 0 0 538px;
     }
   }
 `;

@@ -4,12 +4,16 @@ import Products from '../../../mocks/products';
 import CardProduct from '../../molecules/CardProduct/CardProduct.component';
 import { ItemListContainerStyled } from './ItemListContainer.styled';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = ({ greeting, category }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(Products);
-  }, []);
+    if (category) {
+      setProducts(Products.filter((product) => product.category === category));
+    } else {
+      setProducts(Products);
+    }
+  }, [category]);
 
   return (
     <ItemListContainerStyled>
@@ -18,10 +22,12 @@ const ItemListContainer = ({ greeting }) => {
         <div className="productList">
           {products.map((product) => (
             <CardProduct
+              key={product.id}
+              id={product.id}
               image={product.image}
               price={product.price}
-              alternative_text={product.title}
-              name={product.title}
+              category={product.category}
+              title={product.title}
               description={product.description}
             />
           ))}

@@ -1,19 +1,40 @@
-import { useState } from 'react';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Outlet,
+  Route,
+} from 'react-router-dom';
+
 import Layout from './components/containers/Layout/Layout.component';
-import ItemListContainer from './components/containers/ItemListContainer/ItemListContainer.component';
 import Navbar from './components/molecules/Navbar/Navbar.component';
+import Category from './pages/Category';
+import Home from './pages/Home';
+import ItemDetail from './pages/ItemDetail';
 
-function App() {
-  const [count, setCount] = useState(0);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<AppLayout />}>
+      <Route index element={<Home />} />
+      <Route exact path="category/:categoryId" element={<Category />} />
+      <Route exact path="item/:id" element={<ItemDetail />} />
+    </Route>
+  )
+);
 
+function AppLayout() {
   return (
     <>
       <Navbar />
       <Layout>
-        <ItemListContainer greeting="Bienvenido a mi tienda!" />
+        <Outlet />
       </Layout>
     </>
   );
+}
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
