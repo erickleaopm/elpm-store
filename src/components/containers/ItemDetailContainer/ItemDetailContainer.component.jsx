@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Products from '../../../mocks/Products';
+import Products from '../../../mocks/products';
 import { capitalizeSentence } from '../../../utils/capitalizeSentence';
 import { formatPrice } from '../../../utils/formatPrice';
 import Button from '../../atoms/Button/Button.component';
