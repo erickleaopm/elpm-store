@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ItemDetailContainerStyled = styled.div`
   background: var(--white);
@@ -80,4 +80,4 @@ export const ItemDetailContainerStyled = styled.div`
       flex: 0 0 538px;
     }
   }
-`;
+`

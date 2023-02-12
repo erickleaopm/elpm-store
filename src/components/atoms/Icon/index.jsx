@@ -1,23 +1,23 @@
-import Menu from './menu';
-import Cart from './cart';
+import Menu from './menu'
+import Cart from './cart'
 
-function Index({ name, ...props }) {
+function Index ({ name, ...props }) {
   switch (name) {
     case 'menu': {
-      return <Menu {...props} />;
+      return <Menu {...props} />
     }
     case 'cart': {
-      return <Cart {...props} />;
+      return <Cart {...props} />
     }
     default: {
-      return null;
+      return null
     }
   }
 }
 
 Index.defaultProps = {
   size: 16,
-  color: 'white',
-};
+  color: 'white'
+}
 
-export default Index;
+export default Index

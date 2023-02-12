@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStylesStyled = createGlobalStyle`
   :root {
@@ -36,6 +36,6 @@ const GlobalStylesStyled = createGlobalStyle`
     margin: 0 auto;
     max-inline-size: 1366px;
   }
-`;
+`
 
-export default GlobalStylesStyled;
+export default GlobalStylesStyled

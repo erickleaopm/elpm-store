@@ -1,3 +1,3 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const LayoutStyled = styled.main``;
+export const LayoutStyled = styled.main``

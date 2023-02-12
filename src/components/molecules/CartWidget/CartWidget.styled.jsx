@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CartWidgetStyled = styled.div`
   position: relative;
@@ -15,4 +15,4 @@ export const CartWidgetStyled = styled.div`
     text-align: center;
     line-height: 1.25;
   }
-`;
+`

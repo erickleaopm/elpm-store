@@ -2,5 +2,5 @@ export default [
   "men's clothing",
   'jewelery',
   'electronics',
-  "women's clothing",
-];
+  "women's clothing"
+]

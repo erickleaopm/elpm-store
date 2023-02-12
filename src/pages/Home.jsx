@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import ItemListContainer from '../components/containers/ItemListContainer/ItemListContainer.component';
+import styled from 'styled-components'
+import ItemListContainer from '../components/containers/ItemListContainer/ItemListContainer.component'
 
-const HomeStyled = styled.div``;
+const HomeStyled = styled.div``
 
-function Home() {
+function Home () {
   return (
     <HomeStyled>
-      <ItemListContainer greeting="Bienvenido a mi tienda" />
+      <ItemListContainer greeting='Bienvenido a mi tienda' />
     </HomeStyled>
-  );
+  )
 }
 
-export default Home;
+export default Home

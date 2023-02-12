@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CardProductStyled = styled.div`
   background: var(--white);
@@ -83,4 +83,4 @@ export const CardProductStyled = styled.div`
       margin: 0;
     }
   }
-`;
+`

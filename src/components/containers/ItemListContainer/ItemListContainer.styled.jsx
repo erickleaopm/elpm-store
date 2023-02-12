@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ItemListContainerStyled = styled.div`
   h2 {
@@ -18,4 +18,4 @@ export const ItemListContainerStyled = styled.div`
       gap: 1.5rem;
     }
   }
-`;
+`

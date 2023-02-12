@@ -1,11 +1,11 @@
-import { LayoutStyled } from './Layout.styled';
+import { LayoutStyled } from './Layout.styled'
 
 const Layout = ({ children }) => {
   return (
     <LayoutStyled>
-      <div className="container">{children}</div>
+      <div className='container'>{children}</div>
     </LayoutStyled>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const ButtonStyled = styled.button(({ width }) => {
   return css`
@@ -28,5 +28,5 @@ export const ButtonStyled = styled.button(({ width }) => {
       background: transparent;
       border: none;
     }
-  `;
-});
+  `
+})

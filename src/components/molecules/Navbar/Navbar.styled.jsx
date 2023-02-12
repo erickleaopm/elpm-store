@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const NavbarStyled = styled.header`
   display: flex;
@@ -71,4 +71,4 @@ export const NavbarStyled = styled.header`
       gap: 3rem;
     }
   }
-`;
+`

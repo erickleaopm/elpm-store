@@ -1,5 +1,5 @@
-import { isValidElement } from 'react';
-import { ButtonStyled } from './Button.styled';
+import { isValidElement } from 'react'
+import { ButtonStyled } from './Button.styled'
 
 const Button = ({
   text,
@@ -9,14 +9,14 @@ const Button = ({
   onClick,
   ariaExpanded,
   ariaControls,
-  width,
+  width
 }) => {
-  const component = link ? 'a' : 'button';
-  let IconComponent = null;
+  const component = link ? 'a' : 'button'
+  let IconComponent = null
 
   if (icon) {
     if (isValidElement(icon)) {
-      IconComponent = icon;
+      IconComponent = icon
     }
   }
   return (
@@ -32,7 +32,7 @@ const Button = ({
       {IconComponent}
       {text}
     </ButtonStyled>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
