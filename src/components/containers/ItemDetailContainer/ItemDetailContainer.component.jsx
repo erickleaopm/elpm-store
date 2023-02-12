@@ -1,22 +1,13 @@
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import useProductList from '../../../hooks/useProductList'
+import useProduct from '../../../hooks/useProduct'
 
 import { capitalizeSentence } from '../../../utils/capitalizeSentence'
 import { formatPrice } from '../../../utils/formatPrice'
 import Button from '../../atoms/Button/Button.component'
 import { ItemDetailContainerStyled } from './ItemDetailContainer.styled'
 
-function ItemDetailContainer ({ productId }) {
-  const { products } = useProductList
-  const [product, setProduct] = useState({})
-
-  useEffect(() => {
-    const selectedProduct = products.find(
-      (product) => product.id === parseInt(productId)
-    )
-    setProduct(selectedProduct)
-  }, [])
+function ItemDetailContainer ({ productId, category = null }) {
+  const { product } = useProduct({ id: productId })
 
   return (
     Object.keys(product).length && (

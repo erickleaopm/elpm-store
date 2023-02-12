@@ -27,7 +27,7 @@ function useProductList ({ category = null }) {
     getProducts(category)
   }, [category])
 
-  return { products, loading }
+  return { products, loading, getProducts }
 }
 
 export default useProductList
