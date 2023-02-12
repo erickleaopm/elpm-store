@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import Icon from '../../../atoms/Icon';
+import Icon from '../../../atoms/Icon'
 
 const EmptyProductListStyled = styled.div`
   background: var(--white);
@@ -16,15 +16,15 @@ const EmptyProductListStyled = styled.div`
     font: var(--subtitles-22bold);
     color: var(--text);
   }
-`;
+`
 
-function EmptyProductList() {
+const EmptyProductList = () => {
   return (
     <EmptyProductListStyled>
-      <Icon name="cart" size={50} color="var(--text)" />
+      <Icon name='cart' size={50} color='var(--text)' />
       <h2>No products available</h2>
     </EmptyProductListStyled>
-  );
+  )
 }
 
-export default EmptyProductList;
+export default EmptyProductList
