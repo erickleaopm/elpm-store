@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import CartContext from '../../../../store/CartContext'
 import { capitalizeSentence } from '../../../utils/capitalizeSentence'
 
@@ -11,6 +11,8 @@ import { CardProductStyled } from './CardProduct.styled'
 const CardProduct = ({ id, title, description, image, price, category, isDetail = false }) => {
   const { addToCart } = useContext(CartContext)
   const [amount, setAmount] = useState(0)
+  const [isAdding, setIsAdding] = useState(true)
+  const navigate = useNavigate()
 
   const handleAddToCart = () => {
     addToCart({
@@ -20,6 +22,11 @@ const CardProduct = ({ id, title, description, image, price, category, isDetail 
       amount,
       price
     })
+    setIsAdding(false)
+  }
+
+  const goToCheckout = () => {
+    navigate('/checkout')
   }
 
   return (
@@ -49,13 +56,13 @@ const CardProduct = ({ id, title, description, image, price, category, isDetail 
         <p className={`${!isDetail && 'list'} productDescription`}>{description}</p>
         <div className='productActions'>
           {isDetail
-            ? (
-              <>
-                <CartInput amount={amount} setAmount={setAmount} />
-                <Button text='Agregar al carrito' className='secondary' width={212} onClick={handleAddToCart} />
-                <Button text='Comprar ahora' width={212} />
-              </>
-              )
+            ? isAdding
+              ? (
+                <>
+                  <CartInput amount={amount} setAmount={setAmount} />
+                  <Button text='Agregar al carrito' className='secondary' width={212} onClick={handleAddToCart} />
+                </>)
+              : (<Button text='Ir al Checkout' width={212} onClick={goToCheckout} />)
             : <NavLink className='button' to={`/item/${id}`}>Ver Detalle</NavLink>}
         </div>
       </div>
