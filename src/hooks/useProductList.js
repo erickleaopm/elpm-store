@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../../db/firebase-config'
+import CartContext from '../../store/CartContext'
 
 function useProductList ({ category = null }) {
+  const { setProductsList } = useContext(CartContext)
   const [loading, setLoading] = useState(false)
-  const [products, setProducts] = useState([])
   const productsCollectionRef = collection(db, 'products')
 
   const getProducts = async () => {
@@ -19,7 +20,7 @@ function useProductList ({ category = null }) {
     const docs = querySnapshot.docs.map((doc) => {
       return { id: doc.id, ...doc.data() }
     })
-    setProducts(docs)
+    setProductsList(docs)
     setLoading(false)
   }
 
@@ -27,7 +28,7 @@ function useProductList ({ category = null }) {
     getProducts(category)
   }, [category])
 
-  return { products, loading, getProducts }
+  return { loading, getProducts }
 }
 
 export default useProductList

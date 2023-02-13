@@ -16,7 +16,7 @@ function ItemDetailContainer ({ productId: id, category = null }) {
     const itemDocRef = doc(db, 'products', id)
     const itemDoc = await getDoc(itemDocRef)
     if (itemDoc.exists()) {
-      setItem(itemDoc.data())
+      setItem({ id, ...itemDoc.data() })
     } else {
       setItem({})
     }

@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import CartContext from '../../../../store/CartContext'
 import useProductList from '../../../hooks/useProductList'
 import Loader from '../../atoms/Loader/Loader.component'
 import CardProduct from '../../molecules/CardProduct/CardProduct.component'
@@ -5,7 +7,8 @@ import EmptyProductList from '../../molecules/Errors/EmptyProductList/EmptyProdu
 import { ItemListContainerStyled } from './ItemListContainer.styled'
 
 const ItemListContainer = ({ greeting, category = null }) => {
-  const { products, loading } = useProductList({ category })
+  const { loading } = useProductList({ category })
+  const { products } = useContext(CartContext)
 
   return (
     <ItemListContainerStyled>
