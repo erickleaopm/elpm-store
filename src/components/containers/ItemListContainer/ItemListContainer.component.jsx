@@ -25,7 +25,7 @@ const ItemListContainer = ({ greeting, category = null }) => {
                     <CardProduct
                       key={product.id}
                       id={product.id}
-                      image={product.image.url}
+                      image={product.image}
                       price={product.price}
                       category={product.category.name}
                       title={product.title}

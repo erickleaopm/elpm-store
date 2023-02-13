@@ -8,13 +8,13 @@ const PageNotFoundStyled = styled.div`
   background: var(--white);
   inline-size: 100%;
   max-inline-size: 600px;
-  min-block-size: 350px;
+  min-block-size: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-block-start: 2rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   & > h1 {
     font: var(--subtitles-32bold);
     color: var(--subtextcolor);
@@ -32,7 +32,8 @@ const PageNotFound = () => {
   return (
     <PageNotFoundStyled>
       <Icon name='cancel' size={75} color='var(--red)' />
-      <h1>Opss! La página que buscas no existe.</h1>
+      <h1>Error 404</h1>
+      <h2>Opss! La página que buscas no existe.</h2>
       <Button text='Regresar' onClick={handleBack} />
     </PageNotFoundStyled>
   )

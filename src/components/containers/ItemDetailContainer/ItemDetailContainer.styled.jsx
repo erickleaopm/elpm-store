@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const ItemDetailContainerStyled = styled.div`
+export const ItemDetailContainerStyled = styled.div(({ isDetail }) => css`
   background: var(--white);
   padding: 1rem;
   margin-block-start: 2.5rem;
@@ -41,6 +41,7 @@ export const ItemDetailContainerStyled = styled.div`
     line-height: 1.5rem;
     color: var(--black);
     margin-block-end: 1.5rem;
+
   }
   .productCategory {
     display: inline-block;
@@ -80,4 +81,4 @@ export const ItemDetailContainerStyled = styled.div`
       flex: 0 0 538px;
     }
   }
-`
+`)
